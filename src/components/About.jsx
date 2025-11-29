@@ -1,5 +1,6 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { useEffect, useState } from "react";
 
 const features = [
   {
@@ -33,19 +34,43 @@ const features = [
     title: "Precision-Driven Storytelling",
     description:
       "We combine machine-level precision with emotional storytelling to turn complexity into clarity. CORTE X transforms brands into powerful, globally competitive forces.",
-      image: "src/assets/story.png",
-      type: "image",
-      imagePosition: "left",
+    image: "src/assets/story.png",
+    type: "image",
+    imagePosition: "left",
   },
 ];
 
 export default function Features() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    function handleMouseMove(e) {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <section
       id="features"
-      className="py-16 sm:py-20 px-10 sm:px-6 lg:px-8 relative"
+      className="py-16 sm:py-20 px-10 sm:px-6 lg:px-8 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Mouse follower gradient */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.15), transparent 40%)`,
+        }}
+      />
+
+      {/* Background blur elements */}
+      <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+
+      <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">
