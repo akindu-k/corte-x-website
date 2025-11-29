@@ -14,56 +14,42 @@ export default function Navbar({ scrolled }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
+          
+          {/* Logo */}
           <div className="flex items-center space-x-1 group cursor-pointer">
-            <div>
-              <img
-                src="/src/assets/logo.jpeg"
-                alt="logo"
-                className="w-6 h-6 sm:w-8 sm:h-8"
-              />
-            </div>
+            <img
+              src="/src/assets/logo.jpeg"
+              alt="logo"
+              className="w-6 h-6 sm:w-8 sm:h-8"
+            />
             <span className="text-lg sm:text-xl md:text-2xl font-medium">
               <span className="text-white">CORTE </span>
               <span className="text-blue-400">X</span>
             </span>
           </div>
 
-          {/* Nav Links */}
+          {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              Projects
-            </a>
-            <a
-              href="#testimonials"
-              className="text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              Testimonials
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              Contact
-            </a>
+            {[
+              { name: "Home", href: "#home" },
+              { name: "About", href: "#about" },
+              { name: "Services", href: "#services" },
+              // { name: "Testimonials", href: "#testimonials" },
+              { name: "Contact", href: "#contact" },
+            ].map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-gray-300 hover:text-white text-sm lg:text-base cursor-pointer"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-300 hover:text-white"
+            className="md:hidden p-2 text-gray-300 hover:text-white cursor-pointer"
             onClick={() => setMobileMenuIsOpen((prev) => !prev)}
           >
             {mobileMenuIsOpen ? (
@@ -75,44 +61,26 @@ export default function Navbar({ scrolled }) {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuIsOpen && (
         <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 animate-in slide-in-from-top duration-300">
           <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
-            <a
-              href="#home"
-              onClick={() => setMobileMenuIsOpen(false)}
-              className="block text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={() => setMobileMenuIsOpen(false)}
-              className="block text-gray-300 hover:text-white text-sm lg:text-base"
-            >
-              About
-            </a>
+            {[
+              { name: "Home", href: "#home" },
+              { name: "About", href: "#about" },
+              { name: "Services", href: "#services" },
+              // { name: "Testimonials", href: "#testimonials" },
+              { name: "Contact", href: "#contact" },
+            ].map((link) => (
               <a
-                href="#projects"
+                key={link.name}
+                href={link.href}
                 onClick={() => setMobileMenuIsOpen(false)}
-                className="block text-gray-300 hover:text-white text-sm lg:text-base"
+                className="block text-gray-300 hover:text-white text-sm lg:text-base cursor-pointer"
               >
-                Projects
+                {link.name}
               </a>
-              <a
-                href="#testimonials"
-                onClick={() => setMobileMenuIsOpen(false)}
-                className="block text-gray-300 hover:text-white text-sm lg:text-base"
-              >
-                Testimonials
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuIsOpen(false)}
-                className="block text-gray-300 hover:text-white text-sm lg:text-base"
-              >
-                Contact
-              </a>             
+            ))}
           </div>
         </div>
       )}

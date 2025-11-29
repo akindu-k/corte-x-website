@@ -40,7 +40,7 @@ const features = [
   },
 ];
 
-export default function Features() {
+export default function About() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function Features() {
 
   return (
     <section
-      id="features"
+      id="about"
       className="py-16 sm:py-20 px-10 sm:px-6 lg:px-8 relative overflow-hidden"
     >
       {/* Mouse follower gradient */}
