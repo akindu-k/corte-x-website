@@ -69,7 +69,12 @@ const Contact = () => {
                         <div className="space-y-6">
                             <div className="flex items-center space-x-4 group">
                                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
+                                <a
+                                    href='mailto:cortex.marketing.00@gmail.com'
+                                >
                                     <Mail className="w-6 h-6 text-blue-400" />
+
+                                </a>
                                 </div>
                                 <div>
                                     <p className="text-white font-medium">Email Us</p>
@@ -79,7 +84,11 @@ const Contact = () => {
 
                             <div className="flex items-center space-x-4 group">
                                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
-                                    <Phone className="w-6 h-6 text-blue-400" />
+                                    <a
+                                        href='tel:+94775297380'
+                                    >
+                                        <Phone className="w-6 h-6 text-blue-400" />
+                                    </a>
                                 </div>
                                 <div>
                                     <p className="text-white font-medium">Call Us</p>
