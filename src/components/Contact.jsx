@@ -73,7 +73,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-white font-medium">Email Us</p>
-                                    <p className="text-gray-400">hello@cortex.ai</p>
+                                    <p className="text-gray-400">cortex.marketing.00@gmail.com</p>
                                 </div>
                             </div>
 
@@ -83,11 +83,11 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-white font-medium">Call Us</p>
-                                    <p className="text-gray-400">+1 (555) 123-4567</p>
+                                    <p className="text-gray-400">+94 (77) 529-7380</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4 group">
+                            {/* <div className="flex items-center space-x-4 group">
                                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
                                     <MapPin className="w-6 h-6 text-blue-400" />
                                 </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                                     <p className="text-white font-medium">Visit Us</p>
                                     <p className="text-gray-400">San Francisco, CA</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Stats or Features */}

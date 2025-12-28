@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, Instagram } from "lucide-react";
 
 const footerLinks = {
   Services: ["Brand Development", "Marketing Automation", "Performance Analytics", "Social Media", "AI Consultation"],
@@ -37,26 +37,28 @@ export default function Footer() {
               Amplify your revenue growth with creative strategy engineered through AI intelligence. Scale your business 10x faster.
             </p>
             <div className="flex justify-center sm:justify-start space-x-3 sm:space-x-4">
-              <a
+              {/* <a
                 href="#"
                 className="p-2 sm:p-2.5 bg-slate-800 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/30 border border-transparent transition-all duration-200"
               >
                 <Twitter className="w-5 h-5 sm:w-5 sm:h-5" />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/_cortex00_/?hl=en"
+                target="_blank"
                 className="p-2 sm:p-2.5 bg-slate-800 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/30 border border-transparent transition-all duration-200"
               >
-                <Github className="w-5 h-5 sm:w-5 sm:h-5" />
+                <Instagram className="w-5 h-5 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/corte-x2833/?viewAsMember=true"
                 className="p-2 sm:p-2.5 bg-slate-800 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/30 border border-transparent transition-all duration-200"
+                target="_blank"
               >
                 <Linkedin className="w-5 h-5 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="#"
+                href="mailto:cortex.marketing.00@gmail.com"
                 className="p-2 sm:p-2.5 bg-slate-800 rounded-lg hover:bg-blue-600/20 hover:border-blue-500/30 border border-transparent transition-all duration-200"
               >
                 <Mail className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -93,7 +95,7 @@ export default function Footer() {
         <div className="pt-6 sm:pt-8 border-t-0 sm:border-t border-slate-800">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
             <p className="text-gray-400 text-xs sm:text-sm">
-              © 2025 CORTE X. All rights reserved. AI-Powered Marketing Solutions.
+              © 2026 CORTE X. All rights reserved. AI-Powered Marketing Solutions.
             </p>
             <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm">
               <a
